@@ -22,11 +22,11 @@ export class AppComponent {
     })
   }
 
-  getWeather(con : string){
+  async getWeather(con : string){
     this.countries.getWeather(con).subscribe(data => {
       console.log(data);
       this.wdata = data;
-    })
+    });
   }
   
 }
